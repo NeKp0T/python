@@ -1,0 +1,24 @@
+package:
+  name: codetreegen
+  version: 0.1
+
+# source:
+#   git_rev:
+#   git_url:
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - astunparse
+    - PIL
+
+# test:
+#   imports:
+#     -
+
+# about:
+#   home:

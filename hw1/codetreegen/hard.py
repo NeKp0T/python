@@ -4,7 +4,7 @@ import os
 import astunparse
 from PIL import Image, ImageFont, ImageDraw
 
-from easy import fib
+from codetreegen.easy import fib
 
 class Edge:
     def __init__(self, to, color=None, text=None):
@@ -223,19 +223,26 @@ class TreeDrawer:
             if edge.text is not None:
                 text_centered((x_start + x_end) // 2, (y_start + y_end) // 2, edge.text, center_y=True, fill=line_color)
             self.draw_subtree(edge.to, draw)
-        
+
+def codetreegen(item):
+    tree = parse_to_graph(ast.parse(inspect.getsource(item)))
+    return TreeDrawer().draw(tree)
 
 
-print(astunparse.dump(ast.parse(inspect.getsource(fib))))
+def main():
+    print(astunparse.dump(ast.parse(inspect.getsource(fib))))
 
-tree = parse_to_graph(ast.parse(inspect.getsource(fib)))
+    tree = parse_to_graph(ast.parse(inspect.getsource(fib)))
 
-print(tree)
+    print(tree)
 
-im = TreeDrawer().draw(tree)
-try: 
-    os.mkdir("artifacts") 
-except OSError as error: 
-    print(error)  
+    im = TreeDrawer().draw(tree)
+    try: 
+        os.mkdir("artifacts") 
+    except OSError as error: 
+        print(error)  
 
-im.save("artifacts/output.png", "PNG")
+    im.save("artifacts/output.png", "PNG")
+
+if __name__ == "__main__":
+    main()
