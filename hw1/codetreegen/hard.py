@@ -4,7 +4,7 @@ import os
 import astunparse
 from PIL import Image, ImageFont, ImageDraw
 
-from codetreegen.easy import fib
+from easy import fib
 
 class Edge:
     def __init__(self, to, color=None, text=None):
@@ -230,11 +230,11 @@ def codetreegen(item):
 
 
 def main():
-    print(astunparse.dump(ast.parse(inspect.getsource(fib))))
+    # print(astunparse.dump(ast.parse(inspect.getsource(fib))))
 
     tree = parse_to_graph(ast.parse(inspect.getsource(fib)))
 
-    print(tree)
+    # print(tree)
 
     im = TreeDrawer().draw(tree)
     try: 

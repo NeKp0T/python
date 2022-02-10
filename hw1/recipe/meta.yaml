@@ -1,6 +1,6 @@
 package:
-  name: codetreegen
-  version: 0.1
+  name: "codetreegen"
+  version: "0.1"
 
 # source:
 #   git_rev:
@@ -14,11 +14,17 @@ requirements:
   run:
     - python
     - astunparse
-    - PIL
+    - pillow
 
 # test:
 #   imports:
 #     -
 
-# about:
-#   home:
+source:
+  path: ..
+
+# build:
+#   script: python setup.py install
+
+about:
+  summary: "Generates nice images of your functions' ASTs"
