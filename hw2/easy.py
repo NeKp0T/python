@@ -6,10 +6,10 @@ import texgen as tex
 def list_to_tex(table: list[list[str]], body: str = "") -> str:
     return tex.document(
         preampula=tex.lines(
-            tex.package("cmap"),
-            tex.package("fontenc", options="[T2A]"),
-            tex.package("babel", options="[russian]"),
-            tex.package("inputenc", options="[utf8]"),
+            # tex.package("cmap"),
+            # tex.package("fontenc", options="[T2A]"),
+            # tex.package("babel", options="[russian]"),
+            # tex.package("inputenc", options="[utf8]"),
             tex.package("amsmath, amssymb"),
             tex.package("enumerate"),
             tex.package("graphicx"),

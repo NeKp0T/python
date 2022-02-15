@@ -18,14 +18,16 @@ if __name__ == "__main__":
         pass
     im.save("artifacts/medium.png")
 
-    table_text = list_to_tex([
-        ["1", "$\\frac 1 2$", "$1$"],
-        ["hey", "hey", "hey"],
-        [f"${100000 + i}$" for i in range(3)],
-    ],
+    table_text = list_to_tex(
+        [
+            ["1", "$\\frac 1 2$", "$1$"],
+            ["hey", "hey", "hey"],
+            [f"${100000 + i}$" for i in range(3)],
+        ],
         body=tex.paragraphs(
             "\\includegraphics[width=8cm]{artifacts/medium.png}",
-            "\\href{https://anaconda.org/NeKpoT/codetreegen}{\\underline{link to the package}}"
+            "\\href{https://anaconda.org/NeKpoT/codetreegen}{\\underline{link to the package}}",
+            "lalal"
         )
     )
 
@@ -37,7 +39,7 @@ if __name__ == "__main__":
     with open("artifacts/medium.tex", "w") as output:
         output.write(table_text)
 
-    os.system("pdflatex ./artifacts/medium.tex -interaction=nonstopmode -output-directory=artifacts")
+    os.system("pdflatex -interaction=nonstopmode -output-directory=artifacts ./artifacts/medium.tex")
 
     print(table_text)
 
