@@ -1,6 +1,6 @@
 package:
   name: "codetreegen"
-  version: "0.1"
+  version: "0.2"
 
 # source:
 #   git_rev:
@@ -27,4 +27,5 @@ source:
 #   script: python setup.py install
 
 about:
+  home: https://github.com/NeKp0T/python/tree/hw1/hw1/codetreegen
   summary: "Generates nice images of your functions' ASTs"

@@ -1,10 +1,10 @@
 import inspect
 import ast
 import os
-import astunparse
+# import astunparse
 from PIL import Image, ImageFont, ImageDraw
 
-from easy import fib
+from codetreegen.easy import fib
 
 class Edge:
     def __init__(self, to, color=None, text=None):
@@ -239,8 +239,8 @@ def main():
     im = TreeDrawer().draw(tree)
     try: 
         os.mkdir("artifacts") 
-    except OSError as error: 
-        print(error)  
+    except OSError as _: 
+        pass
 
     im.save("artifacts/output.png", "PNG")
 

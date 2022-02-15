@@ -1,1 +1,1 @@
-from hard import codetreegen
+from codetreegen.hard import codetreegen
