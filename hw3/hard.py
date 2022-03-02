@@ -80,7 +80,6 @@ class Matrix:
         return res
 
     def __hash__(self):
-        # hash = sum of elements hashes
         return sum(sum(hash(x) for x in row) for row in self.data)
 
 
@@ -147,5 +146,5 @@ if __name__ == "__main__":
     with open("artifacts/hard/AB_wrong.txt", "w") as file:
         print_matrix(A @ B, file=file)
     
-    print("Hash A, B, C, D:", hash(A), hash(B), hash(C), hash(D))
-    print("Hash (A,B), (C,D):", hash((A, B)), hash(((C, D))))
+    print(hash(A), hash(B), hash(C), hash(D))
+    print(hash((A, B)), hash(((C, D))))
