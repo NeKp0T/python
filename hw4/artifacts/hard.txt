@@ -1,0 +1,46 @@
+asd
+[368.75] <U asd
+[368.75] >A asd
+[368.75] <B NFQ
+das
+[370.45] <U das
+[370.45] >A das
+sss
+[371.58] <U sss
+[371.58] >A sss
+[373.75] <B QNF
+[378.76] <B FFF
+bob
+[389.05] <U bob
+[389.05] >A bob
+[389.05] <B OBO
+lala
+[393.38] <U lala
+[393.38] >A lala
+[394.05] <B YNYN
+alal
+[394.62] <U alal
+[394.62] >A alal
+asd
+[395.67] <U asd
+[395.67] >A asd
+sad
+[395.98] <U sad
+[395.98] >A sad
+asd
+[396.27] <U asd
+[396.27] >A asd
+asd
+[396.55] <U asd
+[396.55] >A asd
+asd
+[396.84] <U asd
+[396.84] >A asd
+asd
+[397.13] <U asd
+[397.13] >A asd
+[399.06] <B NYNY
+[404.06] <B NFQ
+[409.06] <B FNQ
+[414.07] <B NFQ
+exit
